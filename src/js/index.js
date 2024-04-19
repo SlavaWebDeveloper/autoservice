@@ -202,7 +202,7 @@ const init = () => {
 
     currentStep = 0;
     updateFieldsetVisibility(currentStep);
-    constant.constant.form.reset();
+    constant.form.reset();
   };
 
   constant.form.addEventListener('submit', async (e) => {

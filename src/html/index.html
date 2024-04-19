@@ -7,9 +7,17 @@
     <title>AutoService</title>
     <link rel="stylesheet" href="./css/main.css" />
 
-    <link rel="icon" href="./../img/favicons/favicon.ico" sizes="any"/>
-    <link rel="icon" href="./../img/favicons/favicon.svg" type="image/svg+xml"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="./../img/favicons/apple-touch-icon.png"/>
+    <link rel="icon" href="./../img/favicons/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      href="./../img/favicons/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./../img/favicons/apple-touch-icon.png"
+    />
     <script src="./js/index.bundle.js" type="module"></script>
   </head>
 
@@ -109,7 +117,8 @@
                 />
                 <input
                   class="form__input"
-                  type="text"
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   placeholder="Телефон"
                   name="phone"
                 />
@@ -121,7 +130,7 @@
                 />
                 <input
                   class="form__input"
-                  type="text"
+                  type="number"
                   placeholder="Год выпуска"
                   name="year"
                 />
