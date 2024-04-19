@@ -1,0 +1,244 @@
+.form {
+  --offsetY: 32px;
+  --paddingForm: 60px;
+
+  position: relative;
+  padding: var(--paddingForm);
+
+  background-color: #fff;
+  border-radius: 32px;
+
+  @include laptop {
+    --paddingForm: 40px;
+  }
+
+  @include mobile {
+    border-radius: 16px;
+  }
+
+  // .form__fieldset
+
+  &__fieldset {
+    margin-bottom: var(--offsetY);
+    display: none;
+
+    // .form__fieldset-active
+    &-active {
+      display: block;
+    }
+  }
+
+  // .form__title
+
+  &__title {
+    font-family: var(--font-main);
+    font-weight: var(--font-bold);
+    font-size: var(--form-font-size);
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--text-color-dark);
+    margin-bottom: var(--offsetY);
+  }
+
+  // .form__radio-wrapper
+
+  &__radio-wrapper {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: var(--offsetY);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // .form__months
+
+  &__months {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  // .form__btn-month
+
+  &__btn-month {
+    font-family: var(--font-main);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    color: var(--text-color-dark);
+
+    // .form__btn-month_active
+
+    &_active {
+      color: var(--text-color-red);
+      transform: scale(1.15);
+    }
+  }
+
+  // .form__time
+
+  &__time {
+    display: none;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+
+    font-family: var(--font-main);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    line-height: 1.4;
+    color: var(--text-color-dark);
+  }
+
+  // .form__input
+
+  &__input {
+    border-radius: 8px;
+    padding: 12px 20px;
+    background: #f0f4f4;
+
+    font-family: var(--font-main);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    line-height: 1.4;
+    color: var(--text-color-dark);
+
+    &::placeholder {
+      color: rgba(34, 34, 34, 0.4);
+    }
+    // .form__input-wrapper
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 12px;
+      margin-bottom: var(--offsetY);
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // .form__info
+
+  &__info {
+    &:not(:last-of-type) {
+      margin-bottom: 4px;
+    }
+  }
+
+  // .form__info_data
+
+  &__info_data {
+    font-family: var(--font-main);
+    font-weight: var(--font-regular);
+    font-size: var(--normal-font-size);
+    line-height: 1.4;
+    color: var(--text-color-dark);
+    display: flex;
+    column-gap: 8px;
+  }
+
+  // .form__btn-wrapper
+
+  &__btn-wrapper {
+    margin-top: 20px;
+    display: flex;
+    column-gap: 8px;
+  }
+
+  // .form__btn
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    min-width: 108px;
+
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 12px 20px;
+    background-color: #f0f4f4;
+
+    font-family: var(--font-main);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    line-height: 1.4;
+    text-align: center;
+    color: var(--text-color-dark);
+
+    span,
+    svg {
+      pointer-events: none;
+    }
+
+    &:disabled {
+      color: rgba(34, 34, 34, 0.4);
+      background-color: inherit;
+      pointer-events: none;
+    }
+
+    &:focus-visible {
+      border-color: var(--accent);
+    }
+
+    // @include hover {
+    //   &:not(:disabled) {
+    //     background-color: #e4f0f0;
+    //   }
+    // }
+
+    // .form__btn_next
+
+    &_next {
+      color: var(--text-color);
+      background-color: var(--accent);
+
+      @include hover {
+        background-color: var(--text-color-dark);
+      }
+
+      &:focus-visible {
+        border-color: #222;
+      }
+    }
+
+    // .form__btn_submit
+    &_submit {
+      color: var(--text-color);
+      background-color: var(--accent);
+    }
+  }
+
+  // .form__reset
+
+  &__reset {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+  }
+
+  // .form__reset-title
+
+  &__reset-title {
+    padding-top: 150px;
+  }
+
+  // .form__reset-btn
+
+  &__reset-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: calc(var(--paddingForm) / 2);
+    right: calc(var(--paddingForm) / 2);
+    transition: transform 1s linear;
+
+    @include hover {
+      transform: rotate(-360deg);
+    }
+  }
+}

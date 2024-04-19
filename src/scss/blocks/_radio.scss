@@ -1,0 +1,39 @@
+.radio {
+  // .radio__input
+
+  &__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus-visible + .radio__label {
+      border-color: #d10014;
+    }
+    
+    &:checked + .radio__label {
+      background: var(--page-bg-dark);
+      color: var(--text-color);
+    }
+  }
+
+  // .radio__label
+
+  &__label {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 50px;
+    background-color: #f0f4f4;
+
+    font-family: var(--font-main);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    line-height: 1.4;
+    color: var(--text-color-dark);
+    border: 1px solid transparent;
+
+    @include hover {
+      background-color: #e4f0f0;
+    }
+  }
+}

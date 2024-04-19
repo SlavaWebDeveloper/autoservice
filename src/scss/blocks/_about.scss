@@ -1,0 +1,147 @@
+.about {
+  padding-block: 92px;
+  background-image: linear-gradient(
+    var(--page-bg-dark) 0%,
+    var(--page-bg-dark) 30%,
+    var(--page-bg-dark) 30%,
+    var(--page-bg) 100%
+  );
+
+  @include laptop {
+    padding-block: 80px;
+  }
+
+  @include tablet {
+    padding-block: 90px 55px;
+  }
+
+  @include mobile {
+    padding-block: 50px 25px;
+  }
+
+  // .about__bg
+  &__bg {
+    display: flex;
+    position: relative;
+    min-height: 56vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../../img/redbg.svg");
+
+    @include mobile {
+      background-size: auto 100%;
+      padding: 82px 0 68px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("./../img/tire.svg") center/contain no-repeat;
+      pointer-events: none;
+      height: 25vw;
+      left: 0;
+      right: 0;
+    }
+
+    &::before {
+      top: 0;
+      transform: translateY(-15%);
+
+      @include mobile {
+        transform: translateY(-15%);
+      }
+    }
+
+    &::after {
+      bottom: 0;
+      transform: translateY(25%);
+
+      @include mobile {
+      }
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .about__title
+  &__title {
+    padding: 14px 60px 14px 0;
+    max-width: min-content;
+    text-align: right;
+    justify-self: flex-end;
+    border-right: 2px solid var(--text-color);
+
+    @include laptop {
+      padding: 8px 40px 8px 0;
+      max-width: 406px;
+    }
+
+    @include tablet {
+      padding: 7px 24px 7px 0;
+      max-width: 316px;
+    }
+
+    @include mobile {
+      padding: 0 0 12px;
+      max-width: none;
+      border-right: 0;
+      border-bottom: 2px solid var(--text-color);
+      justify-self: stretch;
+      align-self: end;
+      text-align: left;
+    }
+  }
+
+  // .about__title-text
+
+  &__title-text {
+    font-family: var(--font-main);
+    font-weight: var(--font-bold);
+    font-size: var(--h1-font-size);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--text-color);
+
+    // .about__title-text_black
+
+    &_black {
+      color: var(--text-color-dark);
+    }
+  }
+  // .about__content
+
+  &__content {
+    padding: 14px 0 14px 60px;
+    justify-self: flex-start;
+    max-width: 510px;
+
+    font-family: var(--font-main);
+    font-weight: var(--font-medium);
+    font-size: var(--h3-font-size);
+    line-height: 1.4;
+    color: var(--text-color);
+
+    @include laptop {
+      padding: 14px 0 14px 40px;
+    }
+
+    @include tablet {
+      padding: 7px 0 7px 24px;
+    }
+
+    @include mobile {
+      align-self: start;
+      padding: 12px 0 0;
+    }
+  }
+}

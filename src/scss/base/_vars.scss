@@ -1,0 +1,74 @@
+:root {
+  --container-width: 1240px;
+  --container-padding: 30px;
+
+  @include laptop {
+    --container-width: 1080px;
+    --container-padding: 24px;
+  }
+  
+  @include tablet {
+    --container-width: 680px;
+    --container-padding: 22px;
+  }
+
+  @include mobile {
+    --container-width: 100%;
+    --container-padding: 16px;
+  }
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --font-main: "Raleway", sans-serif;
+
+  --biggest-font-size: 10rem;
+  --h1-font-size: 5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --form-font-size: 2rem;
+
+  @include laptop {
+    --biggest-font-size: 7.5rem;
+    --h1-font-size: 3.75rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --form-font-size: 1.5rem;
+  };
+
+  @include tablet {
+    --biggest-font-size: 5.625rem;
+    --h1-font-size: 3rem;
+  }
+
+  @include mobile {
+    --biggest-font-size: 2.75rem;
+    --h1-font-size: 2rem;
+    --h3-font-size: 1rem;
+  }
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-black: 900;
+
+  --page-bg: #f0f4f4;
+  --page-bg-dark: #222222;
+  --text-color: #fff;
+  --text-color-dark: #222;
+  --text-color-red: #d10014;
+  --accent: #d10014;
+  --link-color: #ac182c;
+
+  --laptop-size: 1199px;
+  --tablet-size: 959px;
+  --mobile-size: 599px;
+
+  --transition-duration: 0.3s; 
+}
+
+.dark {
+  --page-bg: #252526;
+  --text-color: #fff;
+}

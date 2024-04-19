@@ -1,0 +1,19 @@
+.none {
+	display: none !important;
+}
+
+.no-scroll {
+	overflow-y: hidden;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  display: none !important;
+}
+
+.visible-mobile {
+  display: none !important;
+}

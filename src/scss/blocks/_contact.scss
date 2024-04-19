@@ -1,0 +1,41 @@
+.contact {
+  padding: 104px 0 120px;
+  color: var(--text-color-dark);
+
+  @include laptop {
+    padding-top: 60px;
+  }
+
+  @include tablet {
+    padding-block: 50px 100px;
+  }
+
+  @include mobile {
+    padding-block: 50px 80px;
+  }
+
+  // .contact__title
+
+  &__title {
+    font-family: var(--font-main);
+    font-weight: var(--font-bold);
+    font-size: var(--h1-font-size);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color-dark);
+    margin-bottom: 40px;
+
+    &-text {
+      &_red {
+        color: var(--text-color-red);
+      }
+    }
+  }
+
+  // .contact__form
+
+  &__form {
+    position: relative;
+  }
+}
