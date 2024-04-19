@@ -2,4 +2,3 @@ node_modules
 .DS_Store
 gulp
 gulpfile.js
-docs
